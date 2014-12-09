@@ -1,53 +1,33 @@
 
-
-$.simpleWeather({
-     zipcode:'',
+$(document).ready(function() {
+  $.simpleWeather({
+    zipcode: '',
+    woeid: '2486340', //2357536
     location: '',
-    woeid: '2378872',
     unit: 'f',
-    
     success: function(weather) {
+     $('#weather1 .temperature').text(weather.temp+weather.units.temp);
+     //$(' #weather1 .weathericon').text('<i class="icon-'+weather.code+'"></i>');  
+     $('#weather1 .city').text(weather.city); 
+     $('#weather1 .temp').text(weather.temp);
+     $('#weather1 .current').text(weather.currently);  
+     $('#weather1 .image').html('<img src=' +weather.image +'>');
+     $('#weather1 .header').text(weather.city);  
+     $('#weather1 .high').text(weather.high);
+     $('#weather1 .low').text(weather.low);
 
-     $('weathericon').text('<i class="icon-'+weather.code+'"></i>');  
-     $('.city').text(weather.city); 
-     $('.temp').text(weather.temp);
-     $('.current').text(weather.currently);  
-     $('.image').html('<img src=' +weather.image +'>');
-     $('.header').text(weather.city);  
-     $('.high').text(weather.high);
-     $('.low').text(weather.low);
-    
-    $("#weather1").html(html);
-    },
-    
-    error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
-    }
-  });
+     $('#weather1 .day1').text(weather.forecast[1].high);
 
-// Spokane
-
-$.simpleWeather({
-    zipcode:'',
-    location: '2460029',
-    woeid: '',
-    unit: 'f',
-    
-    success: function(weather) {
-
-     $('weathericon').text('<i class="icon-'+weather.code+'"></i>');  
-     $('.city').text(weather.city); 
-     $('.temp').text(weather.temp);
-     $('.current').text(weather.currently);  
-     $('.image').html('<img src=' +weather.image +'>');
-     $('.header').text(weather.city);  
-     $('.high').text(weather.high);
-     $('.low').text(weather.low);
+      //html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
      
-     $("#weather2").html();
+      $("#weather1").html();
     },
-    
     error: function(error) {
-      $("#weather2").html('<p>'+error+'</p>');
+      $("#weather1").html('<p>'+error+'</p>');
     }
   });
+  
+
+});
+
+
