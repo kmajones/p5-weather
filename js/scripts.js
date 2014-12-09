@@ -17,7 +17,8 @@ $(document).ready(function() {
      $('#weather1 .low').text(weather.low);
 
      $('#weather1 .day1').text(weather.forecast[1].high);
-
+     $('#weather1 .day2').text(weather.forecast[2].high);
+     
       //html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
      
       $("#weather1").html();
@@ -27,6 +28,10 @@ $(document).ready(function() {
     }
   });
   
+  //accordion
+  $('.ui.accordion')
+  .accordion()
+;
 
 });
 
