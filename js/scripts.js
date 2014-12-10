@@ -43,19 +43,20 @@ var loadWeather = function(location) {
       $(' .temp').text(weather.temp+weather.units.temp);
       $(' .city').text(weather.city+', '+weather.region);
       $(' .current').text(weather.currently);  
-      $(' .image').html('<img src=' +weather.image +'>');
+       $('.image').html('<img src="img/'+weather.code+'.svg">');
       $(' .header').text(weather.city);  
       $(' .high').text(weather.high+weather.units.temp+'/');
       $(' .low').text(weather.low+weather.units.temp);
 
       $(' .tomtemp').text(weather.forecast[1].high+weather.units.temp);
       $('.tomcurrent').text(weather.forecast[1].text);  
-      $('.tomimage').html('<img src=' +weather.forecast[1].image +'>');
-          $(' .tomhigh').text(weather.forecast[1].high+weather.units.temp+'/');
+      $('.tomimage').html('<img src="img/'+weather.forecast[1].code+'.svg">');
+      $(' .tomhigh').text(weather.forecast[1].high+weather.units.temp+'/');
       $(' .tomlow').text(weather.forecast[1].high+weather.units.temp);
       
       // See console for _weather_ object
       console.log(weather);
+      $('body').addClass("bg"+weather.code);
     }
   
   });
@@ -87,7 +88,7 @@ $('button').on('click', function() {
       $(' .temp').text(weather.temp+weather.units.temp);
       $(' .city').text(weather.city+', '+weather.region);
       $('.current').text(weather.currently);  
-      $('.image').html('<img src=' +weather.image +'>');
+      $('.image').html('<img src="img/'+weather.code+'.svg">');
       $('.header').text(weather.city);  
       $(' .high').text(weather.high+weather.units.temp+'/');
       $(' .low').text(weather.low+weather.units.temp);
@@ -95,12 +96,14 @@ $('button').on('click', function() {
       $(' .tomtemp').text(weather.temp+weather.units.temp);
       $(' .tomcity').text(weather.city+', '+weather.region);
       $('.tomcurrent').text(weather.currently);  
-      $('.tomimage').html('<img src=' +weather.image +'>');
+      $('.tomimage').html('<img src="img/'+weather.forecast[1].code+'.svg">');
       $('.tomheader').text(weather.city);  
       $(' .tomhigh').text(weather.high+weather.units.temp+'/');
       $(' .tomlow').text(weather.low+weather.units.temp);
       // See console for all properties of object
       console.log(weather);
+      $('body').removeClass();
+      $('body').addClass("bg"+weather.code);
     },
   
     error: function(error) {
