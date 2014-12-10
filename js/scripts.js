@@ -93,13 +93,12 @@ $('button').on('click', function() {
       $(' .high').text(weather.high+weather.units.temp+'/');
       $(' .low').text(weather.low+weather.units.temp);
 
-      $(' .tomtemp').text(weather.temp+weather.units.temp);
-      $(' .tomcity').text(weather.city+', '+weather.region);
-      $('.tomcurrent').text(weather.currently);  
+      $(' .tomtemp').text(weather.forecast[1].high+weather.units.temp);
+      $('.tomcurrent').text(weather.forecast[1].text);  
       $('.tomimage').html('<img src="img/'+weather.forecast[1].code+'.svg">');
-      $('.tomheader').text(weather.city);  
-      $(' .tomhigh').text(weather.high+weather.units.temp+'/');
-      $(' .tomlow').text(weather.low+weather.units.temp);
+      $(' .tomhigh').text(weather.forecast[1].high+weather.units.temp+'/');
+      $(' .tomlow').text(weather.forecast[1].high+weather.units.temp);
+      
       // See console for all properties of object
       console.log(weather);
       $('body').removeClass();

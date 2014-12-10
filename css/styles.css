@@ -10,19 +10,8 @@
  	background: #333; 
  }
 
- .code .30,.31,.32,.33,.34,.35,.37,.38,.11{
-
-
- background: url(img/cloudy.svg);
-color:#fff;
- background-size: 100px 82px;
-
- }
-
- .10,.35,.11,.12,.34,.35,.37,.38,.11{
-
- background: url(img/rain.svg);
-color:#fff;
- background-size: 100px 82px;
-
- }
+.tomimage, .image{
+	background:green;
+	width:200px;
+	height:200px;
+}
