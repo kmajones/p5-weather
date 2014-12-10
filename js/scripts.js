@@ -40,13 +40,19 @@ var loadWeather = function(location) {
       
       
       // Output to hooks in HTML
-      $(' .temp').text(weather.temp);
+      $(' .temp').text(weather.temp+weather.units.temp);
       $(' .city').text(weather.city+', '+weather.region);
       $(' .current').text(weather.currently);  
       $(' .image').html('<img src=' +weather.image +'>');
       $(' .header').text(weather.city);  
-      $(' .high').text(weather.high+'/');
-      $(' .low').text(weather.low);
+      $(' .high').text(weather.high+weather.units.temp+'/');
+      $(' .low').text(weather.low+weather.units.temp);
+
+      $(' .tomtemp').text(weather.forecast[1].high+weather.units.temp);
+      $('.tomcurrent').text(weather.forecast[1].text);  
+      $('.tomimage').html('<img src=' +weather.forecast[1].image +'>');
+          $(' .tomhigh').text(weather.forecast[1].high+weather.units.temp+'/');
+      $(' .tomlow').text(weather.forecast[1].high+weather.units.temp);
       
       // See console for _weather_ object
       console.log(weather);
@@ -78,14 +84,21 @@ $('button').on('click', function() {
       
       
       // Output to hooks in HTML
-      $('.temp').text(weather.temp);
-      $('.city').text(weather.city+', '+weather.region);
+      $(' .temp').text(weather.temp+weather.units.temp);
+      $(' .city').text(weather.city+', '+weather.region);
       $('.current').text(weather.currently);  
       $('.image').html('<img src=' +weather.image +'>');
       $('.header').text(weather.city);  
-      $('.high').text(weather.high +'/');
-      $('.low').text(weather.low);
+      $(' .high').text(weather.high+weather.units.temp+'/');
+      $(' .low').text(weather.low+weather.units.temp);
 
+      $(' .tomtemp').text(weather.temp+weather.units.temp);
+      $(' .tomcity').text(weather.city+', '+weather.region);
+      $('.tomcurrent').text(weather.currently);  
+      $('.tomimage').html('<img src=' +weather.image +'>');
+      $('.tomheader').text(weather.city);  
+      $(' .tomhigh').text(weather.high+weather.units.temp+'/');
+      $(' .tomlow').text(weather.low+weather.units.temp);
       // See console for all properties of object
       console.log(weather);
     },
