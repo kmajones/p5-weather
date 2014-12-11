@@ -56,7 +56,7 @@ var loadWeather = function(location) {
       
       // See console for _weather_ object
       console.log(weather);
-      $('body').addClass("bg"+weather.code);
+    
     }
   
   });
@@ -101,8 +101,7 @@ $('button').on('click', function() {
       
       // See console for all properties of object
       console.log(weather);
-      $('body').removeClass();
-      $('body').addClass("bg"+weather.code);
+      
     },
   
     error: function(error) {

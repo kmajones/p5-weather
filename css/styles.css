@@ -6,12 +6,27 @@
 
  }
 
- body{
- 	background: #333; 
+ h1{
+ 	color:#41b09b;
  }
 
+ body{
+ 	background: #333; 
+ 	
+ }
+h2, h3, li{
+	color:#fff;
+}
+
+
+li{
+	list-style: none;
+}
 .tomimage, .image{
-	background:green;
+
 	width:200px;
 	height:200px;
+}
+input p{
+	color:#000;
 }

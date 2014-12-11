@@ -17,14 +17,19 @@
 
 <body>
   
-
+  <article id="weather" class="weather">
 <div class="ui page grid">
 
-  <div class="sixteen wide column">
 
-<article id="weather" class="weather">
+<div class="sixteen wide column">
+ <h1 class="city"></h1>
+</div>
+  
+
+  <div class="eight wide column stackable">
+
     
-      <h1 class="city"></h1>
+     
       <h2>Today</h2>
       <h3 class="current"></h3>
       <ul>
@@ -33,7 +38,9 @@
         <li> <span class="high"></span>
               <span class="low"></span> </li>
       </ul>
+  </div>
 
+  <div class="eight wide column stackable">
       <h2>Tomorrow</h2>
       <h3 class="tomcurrent"></h3>
       <ul>
@@ -42,12 +49,14 @@
         <li> <span class="tomhigh"></span>
               <span class="tomlow"></span> </li>
       </ul>
+  </div>
 
+ <div class="sixteen wide column">
        <input type="text" id="getWeather"/>
     <button>Get Weather</button>
-      </article>  
-
-    </div>
+  </div>
+  
+    </article> 
 </div>
   
 
