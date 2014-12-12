@@ -4,6 +4,7 @@
  	color:#41b09b;
  	margin:0;
  	font-size: 3em;
+ 	font-family: ‘Oswald’, sans-serif; font-weight: 700; 
  }
 
  h2{
@@ -36,10 +37,12 @@
 
  body{
  	background: #333; 
+ 	font-family: 'oswald'
  	
  }
 h2, h3, li, span, .current{
 	color:#f7f7f7;
+	font-family: ‘Oswald’, sans-serif; font-weight: 400;
 }
 
 
