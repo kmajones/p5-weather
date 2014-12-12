@@ -1,15 +1,6 @@
 
 
- h1{
- 	color:#41b09b;
- 	margin:0;
- 	font-size: 3em;
- 	font-family: ‘Oswald’, sans-serif; font-weight: 700; 
- }
-
- h2{
-
- }
+/*Float image and description together*/
 .current, .image, .tomcurrent, .tomimage{
 	display:block;
 	float:left;
@@ -18,9 +9,10 @@
 	margin-left: 2%;
 	font-size: 1.5em;
 }
+
 .temp, .tomtemp{
 	font-size: 6em;
-	margin:3% auto;
+	margin:0;
 	clear:both;
 	color:#41b09b;
 
@@ -28,6 +20,7 @@
 
 .high, .low, .tomhigh, .tomlow{
 	color:#F7f7f7;
+	margin-top:0;
 }
 
 .ui.input input{
@@ -35,26 +28,38 @@
 
 }
 
- body{
- 	background: #333; 
- 	font-family: 'oswald'
- 	
- }
-h2, h3, li, span, .current{
-	color:#f7f7f7;
-	font-family: ‘Oswald’, sans-serif; font-weight: 400;
-}
-
-
-li{
-	list-style: none;
-	display:block;
-}
+/*Image styling*/
 .tomimage, .image{
 
 	width:25px;
 	height:25px;
 }
+
+/*General Styling*/
+ body{
+ 	background: #333; 
+ 	font-family: 'oswald'
+ 	
+ }
+
+
+ h1{
+ 	color:#41b09b;
+ 	margin:3%;
+ 	font-size: 3em;
+ 	font-family: ‘Oswald’, sans-serif; font-weight: 700; 
+ }
+
+h2, h3, li, span, .current{
+	color:#f7f7f7;
+	font-family: ‘Oswald’, sans-serif; font-weight: 400;
+}
+
+li{
+	list-style: none;
+	display:block;
+}
+
 input p{
 	color:#000;
 }
